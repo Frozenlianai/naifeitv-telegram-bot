@@ -25,22 +25,15 @@ NaifeiTV Telegram Bot 是一个专为影视爱好者打造的 Telegram 机器人
   - python-telegram-bot==20.0
 
 安装依赖：
-```bash
+bash
 pip install -r requirements.txt
-```
-
----
 
 ## Token 配置
 
-1. 打开 `bot/telegram_bot.py` 文件。
+1. cd naifeitv-telegram-bot/bot，打开 `telegram_bot.py` 文件。
 2. 找到如下位置：
-   ```python
+   python
    BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'  # 这里填你的机器人Token
-   ```
-3. 将 `'YOUR_BOT_TOKEN_HERE'` 替换为你自己的 Telegram 机器人 Token。
-
----
 
 ## 启动机器人
 
@@ -167,17 +160,68 @@ A: 编辑 `bot/telegram_bot.py` 文件即可自定义命令和展示方式。
 ---
 
 ## 新手操作流程
-1. 安装 Python 3.8+，并安装依赖。
-2. 获取 Telegram Bot Token，填入 `bot/telegram_bot.py`。
-3. 运行 `python main.py` 启动机器人。
-4. 在 Telegram 搜索你的机器人，或将其拉入群组。
-5. 按照 `/st`、`/so`、`/se` 等命令体验功能。
+1.项目部署与安装指南
+
+该项目采用Node.js编写，但同时依赖Python环境及特定Python包。以下是详细的部署环境和安装步骤。
+
+部署环境
+1. Node.js 环境
+Node.js‌：确保已安装Node.js，建议版本为当前稳定版。
+npm‌（Node包管理器）：随Node.js一同安装。
+2. Python 环境
+Python‌：版本3.8及以上。
+pip‌：Python包管理器，通常随Python一同安装。
+
+
+
+安装步骤
+1. 安装 Node.js 和 npm
+访问Node.js官网下载并安装适用于您操作系统的Node.js版本。
+安装完成后，在命令行中输入node -v和npm -v以验证安装。
+
+2. 克隆项目代码
+打开命令行或终端。
+使用git clone命令克隆项目仓库：
+bash
+Copy Code
+git clone https://github.com/Frozenlianai/naifeitv-telegram-bot.git
+
+3.进入项目目录：
+bash
+Copy Code
+cd naifeitv-telegram-bot
+
+4. 安装 Node.js 依赖
+在项目目录下运行以下命令以安装Node.js依赖包：
+bash
+Copy Code
+npm install
+
+5. 安装 Python 依赖
+确保Python 3.8及以上版本已安装。
+使用pip安装所需的Python包：
+bash
+Copy Code
+pip install requests beautifulsoup4 python-telegram-bot==20.0
+
+6. 配置项目（如有需要）
+根据项目需求，您可能需要配置环境变量、API密钥等。
+请参考项目内的README.md文件或相关文档进行配置。
+
+7. 运行项目
+在项目目录下，运行项目：
+python main.py
+
+在安装依赖时，请确保网络连接稳定。
+如遇依赖安装失败，请检查pip源是否配置正确，或尝试使用国内镜像源。
+在运行项目前，请确保所有必要的配置已完成。
+
+按照以上步骤操作后，您的项目应该能够成功部署并运行。如遇问题，请参考项目文档或寻求社区帮助。
 
 ---
 
-## 目录结构
+目录结构
 
-```
 naifeitv-telegram-bot/
 ├── requirements.txt
 ├── main.py
@@ -190,11 +234,7 @@ naifeitv-telegram-bot/
     ├── telegram_bot.py
     └── db.py
 ```
-
----
-
-## 联系与致谢
-
 如有问题或建议，请在项目 issue 区留言，或联系开发者。
+本项目仅供学习目的，切勿商用，否则造成一切损失后果自行负责，使用即代表同意。
 
 感谢所有开源社区和用户的支持！ 
