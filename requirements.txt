@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 requests
 beautifulsoup4
+=======
+requests
+beautifulsoup4
+>>>>>>> a46551fe2b1df31a9293549025778301ee7aae8a
 python-telegram-bot==20.0 
